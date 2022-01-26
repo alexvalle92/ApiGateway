@@ -28,5 +28,13 @@ namespace ApiGateway.Produto.Controllers
         {
             return Ok(Produtos);
         }
+
+        [HttpGet("{id:int}", Name = "Get")]
+        public IActionResult Get(int id)
+        {
+            if (id > Produtos.Length - 1)
+                id = Produtos.Length - 1;
+            return Ok(Produtos[id]);
+        }
     }
 }

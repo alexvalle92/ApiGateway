@@ -28,5 +28,13 @@ namespace ApiGateway.Cliente.Controllers
         {
             return Ok(Clientes);
         }
+
+        [HttpGet("{id:int}", Name = "Get")]
+        public IActionResult Get(int id)
+        {
+            if (id > Clientes.Length - 1)
+                id = Clientes.Length - 1;
+            return Ok(Clientes[id]);
+        }
     }
 }
