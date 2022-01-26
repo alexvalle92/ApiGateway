@@ -1,7 +1,7 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/cliente",
+      "DownstreamPathTemplate": "/Cliente",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -10,10 +10,11 @@
         }
       ],
       "UpstreamPathTemplate": "/gateway/cliente",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamHttpMethod": [ "Get" ],
+      "DangerousAcceptAnyServerCertificateValidator": true
     },
     {
-      "DownstreamPathTemplate": "/api/produto",
+      "DownstreamPathTemplate": "/Produto",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -22,10 +23,11 @@
         }
       ],
       "UpstreamPathTemplate": "/gateway/produto",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamHttpMethod": [ "Get" ],
+      "DangerousAcceptAnyServerCertificateValidator": true
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:5000"
+    "BaseUrl": "https://localhost:5001"
   }
 }
